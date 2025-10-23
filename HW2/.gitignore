@@ -4,12 +4,6 @@ __pycache__/
 .vscode/
 .idea/
 
-# Data & generated artifacts
-artifacts/
-figures/
-logs/
-data/
-__pycache__/
 
 # Misc
 .DS_Store

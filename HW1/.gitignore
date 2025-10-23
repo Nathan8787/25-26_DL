@@ -4,11 +4,7 @@ __pycache__/
 .vscode/
 .idea/
 
-# Data & outputs
-artifacts/
-figures/
-data/
-logs/
+
 
 # OS-specific
 .DS_Store
