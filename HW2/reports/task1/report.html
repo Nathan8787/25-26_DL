@@ -1,0 +1,373 @@
+<!DOCTYPE html><html><head>
+      <title>task1_report</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////home/nathan0401/.vscode-server/extensions/shd101wyy.markdown-preview-enhanced-0.8.19/crossnote/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<div align="center">
+  <span style="color:#111827; font-size:40px; font-weight:700;">
+    HW2 Task 1 · MNIST CNN Report
+  </span><br>
+  <span style="color:#4b5563; font-size:26px; font-weight:600;">
+    Nathan (a141251) · 2025-10-23
+  </span>
+</div>
+<hr>
+<h2 id="1-executive-summary-摘要">1. Executive Summary 摘要 </h2>
+<ul>
+<li>以三個卷積區塊為核心的 CNN（stride 全為 1、kernel=3）在 MNIST 測試集達成 <strong>Top-1 Accuracy = 99.62%</strong>（<code>reports/task1/summary.json</code>）。</li>
+<li>Stride/Kernel 掃描顯示：第一層 stride=1 為最佳策略；kernel 放大至 5 僅帶來 0.05% 內的浮動。</li>
+<li>L2 正則化（λ ∈ {0, 1e-5, 1e-4, 5e-4, 1e-3}）顯示<strong>輕量正則化即可穩定權重</strong>，過大 λ 會緩慢降低準確率。</li>
+<li>透過正確/錯誤樣本、卷積特徵圖、權重分佈視覺化，分析模型對筆畫與邊緣的感知特性。</li>
+<li>完整訓練（baseline + sweep）約 23 分鐘（<code>artifacts/task1/training_durations.json</code>），在 RTX 4060 Laptop GPU 上執行。</li>
+</ul>
+<hr>
+<h2 id="2-dataset--preprocessing-資料與前處理">2. Dataset &amp; Preprocessing 資料與前處理 </h2>
+<table>
+<thead>
+<tr>
+<th>項目 Item</th>
+<th>設定 Setting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset</td>
+<td><code>tf.keras.datasets.mnist</code>（28×28、灰階、10 類）</td>
+</tr>
+<tr>
+<td>Split</td>
+<td>Train 55,000 / Val 5,000 / Test 10,000（以最後 10% 當驗證集）</td>
+</tr>
+<tr>
+<td>Normalization</td>
+<td>像素除以 255 → <code>[0,1]</code>，不另行標準化</td>
+</tr>
+<tr>
+<td>DataLoader</td>
+<td><code>tf.data.Dataset</code>，train 集 shuffle=10,000，batch size=128</td>
+</tr>
+<tr>
+<td>Artifacts</td>
+<td>影像與分類報告輸出於 <code>figures/task1/</code>, <code>reports/task1/</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-model--training-setup-模型與訓練設定">3. Model &amp; Training Setup 模型與訓練設定 </h2>
+<table>
+<thead>
+<tr>
+<th>組件</th>
+<th>配置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Architecture</td>
+<td>3×(Conv-BN-ReLU-Conv-BN-ReLU-MaxPool) → Dense(256) → Dropout(0.5) → Dense(10, softmax)</td>
+</tr>
+<tr>
+<td>Filters / Kernels</td>
+<td><code>[32, 64, 128]</code> with default kernel <code>[3,3,3]</code>；stride sweep 允許 <code>[1,1,2]</code>, <code>[2,1,1]</code></td>
+</tr>
+<tr>
+<td>Optimizer</td>
+<td>Adam (lr=1e-3, β1=0.9, β2=0.999, ε=1e-7)</td>
+</tr>
+<tr>
+<td>Regularization</td>
+<td>Dropout(0.5) + 可選 L2</td>
+</tr>
+<tr>
+<td>Schedules</td>
+<td>ReduceLROnPlateau (patience=3, factor=0.5), EarlyStopping (patience=7, restore best)</td>
+</tr>
+<tr>
+<td>Seed / Repro</td>
+<td><code>CONFIG["seed"]=20250318</code>，確保訓練重現一致</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="4-baseline-performance-基準成效">4. Baseline Performance 基準成效 </h2>
+<table>
+<thead>
+<tr>
+<th>Split</th>
+<th>Loss</th>
+<th>Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Train</td>
+<td>1.20e-05</td>
+<td>100.00%</td>
+</tr>
+<tr>
+<td>Val</td>
+<td>0.0348</td>
+<td>99.42%</td>
+</tr>
+<tr>
+<td>Test</td>
+<td><strong>0.0172</strong></td>
+<td><strong>99.62%</strong></td>
+</tr>
+</tbody>
+</table>
+<p align="center">
+  <img src="figures/task1/learning_curve_baseline.png" alt="Learning Curve Baseline" width="520">
+</p>
+<p align="center">
+  <img src="figures/task1/confusion_matrix_baseline.png" alt="Confusion Matrix Baseline" width="420">
+</p>
+<p><strong>觀察：</strong></p>
+<ul>
+<li>學習曲線顯示前 10 個 epoch 內快速收斂，之後 loss/accuracy 平穩，無明顯過擬合。</li>
+<li>混淆矩陣集中於對角線，殘存錯誤主要出現在 5↔3、8↔9 等筆畫相近的數字。</li>
+</ul>
+<hr>
+<h2 id="5-stride--kernel-grid-掃描requirement-1-1">5. Stride / Kernel Grid 掃描（Requirement 1-1） </h2>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Stride</th>
+<th>Kernel Sizes</th>
+<th>Test Acc.</th>
+<th>Test Loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stride1-1-1_kernel3-3-3</td>
+<td>[1,1,1]</td>
+<td>[3,3,3]</td>
+<td><strong>99.52%</strong></td>
+<td>0.0206</td>
+</tr>
+<tr>
+<td>stride1-1-1_kernel5-3-3</td>
+<td>[1,1,1]</td>
+<td>[5,3,3]</td>
+<td>99.52%</td>
+<td>0.0236</td>
+</tr>
+<tr>
+<td>stride1-1-1_kernel5-5-3</td>
+<td>[1,1,1]</td>
+<td>[5,5,3]</td>
+<td>99.47%</td>
+<td>0.0235</td>
+</tr>
+<tr>
+<td>stride1-1-2_kernel3-3-3</td>
+<td>[1,1,2]</td>
+<td>[3,3,3]</td>
+<td>99.49%</td>
+<td>0.0250</td>
+</tr>
+<tr>
+<td>stride1-1-2_kernel5-3-3</td>
+<td>[1,1,2]</td>
+<td>[5,3,3]</td>
+<td>99.49%</td>
+<td>0.0225</td>
+</tr>
+<tr>
+<td>stride1-1-2_kernel5-5-3</td>
+<td>[1,1,2]</td>
+<td>[5,5,3]</td>
+<td>99.45%</td>
+<td>0.0236</td>
+</tr>
+<tr>
+<td>stride2-1-1_kernel3-3-3</td>
+<td>[2,1,1]</td>
+<td>[3,3,3]</td>
+<td>99.30%</td>
+<td>0.0315</td>
+</tr>
+<tr>
+<td>stride2-1-1_kernel5-3-3</td>
+<td>[2,1,1]</td>
+<td>[5,3,3]</td>
+<td>99.26%</td>
+<td>0.0317</td>
+</tr>
+<tr>
+<td>stride2-1-1_kernel5-5-3</td>
+<td>[2,1,1]</td>
+<td>[5,5,3]</td>
+<td>99.36%</td>
+<td>0.0311</td>
+</tr>
+</tbody>
+</table>
+<p align="center">
+  <img src="figures/task1/learning_curve_stride1-1-1_kernel3-3-3.png" alt="Learning Curve Stride Sweep" width="460">
+</p>
+<p><strong>重點：</strong> 第一層 stride=1 是性能關鍵；stride=2 會犧牲約 0.2%–0.3% 的準確率。Kernel 變大僅帶來微幅差異，建議以 3×3 為主以兼顧效率。</p>
+<hr>
+<h2 id="6-l2-regularization-studyrequirement-1-4">6. L2 Regularization Study（Requirement 1-4） </h2>
+<table>
+<thead>
+<tr>
+<th>λ</th>
+<th>Test Acc.</th>
+<th>Test Loss</th>
+<th>Weight Norm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 (baseline)</td>
+<td><strong>99.60%</strong></td>
+<td><strong>0.0138</strong></td>
+<td>371.71</td>
+</tr>
+<tr>
+<td>1e-5</td>
+<td>99.55%</td>
+<td>0.0332</td>
+<td>366.00</td>
+</tr>
+<tr>
+<td>1e-4</td>
+<td>99.50%</td>
+<td>0.0617</td>
+<td>199.30</td>
+</tr>
+<tr>
+<td>5e-4</td>
+<td>99.52%</td>
+<td>0.0453</td>
+<td>105.31</td>
+</tr>
+<tr>
+<td>1e-3</td>
+<td>99.45%</td>
+<td>0.0744</td>
+<td>113.44</td>
+</tr>
+</tbody>
+</table>
+<p align="center">
+  <img src="figures/task1/weights_conv_block2_conv1_0_l2_1e-03.png" alt="Weight Distribution L2=1e-3" width="420">
+</p>
+<p align="center">
+  <img src="figures/task1/weights_dense_1_1_baseline.png" alt="Bias Distribution Baseline Dense Layer" width="420">
+</p>
+<p><strong>解析：</strong></p>
+<ul>
+<li>輕量 L2 (≤1e-5) 對測試準確率影響極小，但可緩和訓練 loss 的震盪。</li>
+<li>λ≥1e-4 會強迫權重集中於 0，導致欠擬合與 loss 增加。</li>
+<li>權重與偏置直方圖顯示高正則化時分佈變窄；偏置通道 (<code>weights_*_1_*.png</code>) 仍維持以 0 為中心的對稱形態，證明模型並未因正則化而偏移決策門檻。</li>
+</ul>
+<hr>
+<h2 id="7-correct-vs-incorrect-samples--feature-mapsrequirements-1-2-1-3">7. Correct vs Incorrect Samples &amp; Feature Maps（Requirements 1-2, 1-3） </h2>
+<p align="center">
+  <img src="figures/task1/correct_vs_incorrect_baseline.png" alt="Correct vs Incorrect Samples" width="540">
+</p>
+<ul>
+<li>正確樣本：筆畫清晰、中心化的數字（1、7、9 等）。</li>
+<li>錯誤樣本：筆畫連結異常或有雜訊，例如歪斜的「5」、筆跡模糊的「8」。</li>
+<li>建議：加入輕微旋轉/仿射增強可進一步減少此類錯誤。</li>
+</ul>
+<p align="center">
+  <img src="figures/task1/feature_maps_sample18_layer3_baseline.png" alt="Feature Maps Layer 3" width="540">
+</p>
+<ul>
+<li>Layer 0：類似 Sobel/Gabor 的邊緣濾波器。</li>
+<li>Layer 3：聚焦於局部筆畫（彎曲、交叉）。</li>
+<li>深層（Layer 5 以後）趨向於高階結構，留下辨識所需的筆畫骨架。</li>
+<li>以上觀察與 <code>reports/task1/feature_map_observations.md</code> 紀錄相符。</li>
+</ul>
+<hr>
+<h2 id="8-training-efficiency-訓練時間">8. Training Efficiency 訓練時間 </h2>
+<table>
+<thead>
+<tr>
+<th>任務</th>
+<th>Epochs Ran</th>
+<th>時間 (s)</th>
+<th>時間 (min)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>baseline</td>
+<td>27</td>
+<td>94.56</td>
+<td>1.58</td>
+</tr>
+<tr>
+<td>stride1-1-1_kernel3-3-3</td>
+<td>24</td>
+<td>75.28</td>
+<td>1.25</td>
+</tr>
+<tr>
+<td>stride2-1-1_kernel5-3-3</td>
+<td>21</td>
+<td>47.68</td>
+<td>0.79</td>
+</tr>
+<tr>
+<td>l2_0e00</td>
+<td>26</td>
+<td>88.27</td>
+<td>1.47</td>
+</tr>
+<tr>
+<td>l2_1e-03</td>
+<td>19</td>
+<td>69.16</td>
+<td>1.15</td>
+</tr>
+</tbody>
+</table>
+<p>（完整紀錄請參考 <code>artifacts/task1/training_durations.json</code>）</p>
+<hr>
+<h2 id="9-conclusions--future-work">9. Conclusions &amp; Future Work </h2>
+<ul>
+<li>已依題目 1-1 至 1-4 的所有要求完成實驗、圖表與分析。</li>
+<li>建議延伸：導入 Mixup/CutMix、Grad-CAM 分析或二階分類器以處理難辨識數字。</li>
+<li>所有圖表與 CSV 皆位於 <code>figures/task1/</code>、<code>reports/task1/</code>，程式記錄於 <code>task1_mnist_pipeline.py</code>。</li>
+<li>若僅需撰寫報告，可直接引用上述圖表與表格；若需重現結果，在相同環境執行 <code>python task1_mnist_pipeline.py --mode all</code> 即可重新生成。</li>
+</ul>
+<hr>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
