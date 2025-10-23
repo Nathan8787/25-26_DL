@@ -26,7 +26,7 @@
 | Split     | Train 55,000 / Val 5,000 / Test 10,000（以最後 10% 當驗證集） |
 | Normalization | 像素除以 255 → `[0,1]`，不另行標準化 |
 | DataLoader | `tf.data.Dataset`，train 集 shuffle=10,000，batch size=128 |
-| Artifacts  | 影像與分類報告輸出於 `figures/task1/`, `reports/task1/` |
+| Artifacts  | 影像與分類報告輸出於 `reports/task1/images/`, `reports/task1/` |
 
 ---
 
@@ -52,11 +52,11 @@
 | Test  | **0.0172** | **99.62%** |
 
 <p align="center">
-  <img src="figures/task1/learning_curve_baseline.png" alt="Learning Curve Baseline" width="520">
+  <img src="images/learning_curve_baseline.png" alt="Learning Curve Baseline" width="520">
 </p>
 
 <p align="center">
-  <img src="figures/task1/confusion_matrix_baseline.png" alt="Confusion Matrix Baseline" width="420">
+  <img src="images/confusion_matrix_baseline.png" alt="Confusion Matrix Baseline" width="420">
 </p>
 
 **觀察：**
@@ -80,7 +80,7 @@
 | stride2-1-1_kernel5-5-3 | [2,1,1] | [5,5,3] | 99.36% | 0.0311 |
 
 <p align="center">
-  <img src="figures/task1/learning_curve_stride1-1-1_kernel3-3-3.png" alt="Learning Curve Stride Sweep" width="460">
+  <img src="images/learning_curve_stride1-1-1_kernel3-3-3.png" alt="Learning Curve Stride Sweep" width="460">
 </p>
 
 **重點：** 第一層 stride=1 是性能關鍵；stride=2 會犧牲約 0.2%–0.3% 的準確率。Kernel 變大僅帶來微幅差異，建議以 3×3 為主以兼顧效率。
@@ -98,11 +98,11 @@
 | 1e-3 | 99.45% | 0.0744 | 113.44 |
 
 <p align="center">
-  <img src="figures/task1/weights_conv_block2_conv1_0_l2_1e-03.png" alt="Weight Distribution L2=1e-3" width="420">
+  <img src="images/weights_conv_block2_conv1_0_l2_1e-03.png" alt="Weight Distribution L2=1e-3" width="420">
 </p>
 
 <p align="center">
-  <img src="figures/task1/weights_dense_1_1_baseline.png" alt="Bias Distribution Baseline Dense Layer" width="420">
+  <img src="images/weights_dense_1_1_baseline.png" alt="Bias Distribution Baseline Dense Layer" width="420">
 </p>
 
 **解析：**
@@ -115,7 +115,7 @@
 ## 7. Correct vs Incorrect Samples & Feature Maps（Requirements 1-2, 1-3）
 
 <p align="center">
-  <img src="figures/task1/correct_vs_incorrect_baseline.png" alt="Correct vs Incorrect Samples" width="540">
+  <img src="images/correct_vs_incorrect_baseline.png" alt="Correct vs Incorrect Samples" width="540">
 </p>
 
 - 正確樣本：筆畫清晰、中心化的數字（1、7、9 等）。  
@@ -123,7 +123,7 @@
 - 建議：加入輕微旋轉/仿射增強可進一步減少此類錯誤。
 
 <p align="center">
-  <img src="figures/task1/feature_maps_sample18_layer3_baseline.png" alt="Feature Maps Layer 3" width="540">
+  <img src="images/feature_maps_sample18_layer3_baseline.png" alt="Feature Maps Layer 3" width="540">
 </p>
 
 - Layer 0：類似 Sobel/Gabor 的邊緣濾波器。  
@@ -150,7 +150,7 @@
 ## 9. Conclusions & Future Work
 - 已依題目 1-1 至 1-4 的所有要求完成實驗、圖表與分析。  
 - 建議延伸：導入 Mixup/CutMix、Grad-CAM 分析或二階分類器以處理難辨識數字。  
-- 所有圖表與 CSV 皆位於 `figures/task1/`、`reports/task1/`，程式記錄於 `task1_mnist_pipeline.py`。  
+- 所有圖表與 CSV 皆位於 `reports/task1/images/`、`reports/task1/`，程式記錄於 `project/src/task1_mnist_pipeline.py`。  
 - 若僅需撰寫報告，可直接引用上述圖表與表格；若需重現結果，在相同環境執行 `python task1_mnist_pipeline.py --mode all` 即可重新生成。
 
 ---

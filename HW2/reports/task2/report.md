@@ -29,7 +29,7 @@
 | Preprocessing Variants | baseline / no_standardization / no_augmentation / no_cutout / no_color / no_mixup |
 
 <p align="center">
-  <img src="figures/task2/correct_vs_incorrect_baseline.png" alt="Correct vs Incorrect Samples CIFAR-10" width="620">
+  <img src="images/correct_vs_incorrect_baseline.png" alt="Correct vs Incorrect Samples CIFAR-10" width="620">
 </p>
 
 **重點：** 正確樣本多為背景乾淨、拍攝角度正的飛機/船；錯誤樣本常見於貓狗背景複雜或角度異常的情況。
@@ -49,7 +49,7 @@
 | EarlyStopping | patience=12（監控 val top-1），會還原最佳權重 |
 
 <p align="center">
-  <img src="figures/task2/learning_curve_baseline.png" alt="Learning Curve CIFAR-10" width="520">
+  <img src="images/learning_curve_baseline.png" alt="Learning Curve CIFAR-10" width="520">
 </p>
 
 ---
@@ -63,7 +63,7 @@
 | Test  | **1.130** | **73.79%** | **97.62%** |
 
 <p align="center">
-  <img src="figures/task2/confusion_matrix_baseline.png" alt="Confusion Matrix CIFAR-10" width="480">
+  <img src="images/confusion_matrix_baseline.png" alt="Confusion Matrix CIFAR-10" width="480">
 </p>
 
 **觀察：**
@@ -102,7 +102,7 @@
 | 1e-3 | **76.31%** | 98.01% | 356.42 |
 
 <p align="center">
-  <img src="figures/task2/weights_block2_conv1_0_l2_5e-04.png" alt="Weight Distribution L2=5e-4" width="460">
+  <img src="images/weights_block2_conv1_0_l2_5e-04.png" alt="Weight Distribution L2=5e-4" width="460">
 </p>
 
 **解析：**
@@ -114,8 +114,8 @@
 ## 7. Feature Maps & Qualitative Analysis（Requirement 2-2, 2-3）
 
 <p align="center">
-  <img src="figures/task2/featuremaps_cls0_block1_baseline.png" alt="Feature Maps Block1 Airplane" width="520"><br>
-  <img src="figures/task2/featuremaps_cls0_block3_baseline.png" alt="Feature Maps Block3 Airplane" width="520">
+  <img src="images/featuremaps_cls0_block1_baseline.png" alt="Feature Maps Block1 Airplane" width="520"><br>
+  <img src="images/featuremaps_cls0_block3_baseline.png" alt="Feature Maps Block3 Airplane" width="520">
 </p>
 
 - **Block 1**：偵測邊緣、顏色梯度、天空背景。  
@@ -136,7 +136,7 @@
 | no_mixup | 73.96% | 97.82% | 0.7338 | baseline 已關閉 Mixup，結果一致 |
 
 <p align="center">
-  <img src="figures/task2/learning_curve_pre_no_cutout.png" alt="Learning Curve without Cutout" width="520">
+  <img src="images/learning_curve_pre_no_cutout.png" alt="Learning Curve without Cutout" width="520">
 </p>
 
 **洞察：**
@@ -169,7 +169,7 @@
   1. 將 Cutout 關閉或改用 CutMix。  
   2. 啟用 Mixup（α≈0.2）搭配 L2=1e-3。  
   3. 升級模型為 ResNet/WideResNet，或引入 label smoothing。  
-- 所有重要輸出位於 `figures/task2/`、`reports/task2/`；程式實作於 `task2_cifar10_pipeline.py`。  
+- 所有重要輸出位於 `reports/task2/images/`、`reports/task2/`；程式實作於 `project/src/task2_cifar10_pipeline.py`。  
 - 依 README 指南建立環境後，可透過 `python task2_cifar10_pipeline.py --mode baseline` 重建核心成果，再額外針對特定實驗執行其他模式。
 
 ---
