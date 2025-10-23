@@ -1,0 +1,17 @@
+{
+  "best_config": {
+    "tag": "baseline"
+  },
+  "metrics": {
+    "train_loss": 1.1988929145445582e-05,
+    "train_accuracy": 1.0,
+    "val_loss": 0.03476483002305031,
+    "val_accuracy": 0.9941999912261963,
+    "test_loss": 0.01719094254076481,
+    "test_accuracy": 0.9962000250816345,
+    "test_accuracy_macro": 0.9962,
+    "test_precision_macro": 0.9962292987194481,
+    "test_recall_macro": 0.9961327567426682,
+    "test_f1_macro": 0.9961784451321378
+  }
+}

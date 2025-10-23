@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+.vscode/
+.idea/
+
+HW1/project/artifacts/
+HW1/project/data/processed/
+HW1/project/figures/
+HW2/artifacts/
+HW2/data/
+HW2/figures/
+HW2/logs/
+
+# macOS / Windows noise
+.DS_Store
+Thumbs.db

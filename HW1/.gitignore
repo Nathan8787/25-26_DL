@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.vscode/
+.idea/
+
+# Data & outputs
+artifacts/
+figures/
+data/
+logs/
+
+# OS-specific
+.DS_Store
+Thumbs.db

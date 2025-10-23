@@ -1,0 +1,21 @@
+{
+  "best_config": {
+    "tag": "baseline"
+  },
+  "metrics": {
+    "train_loss": 1.1621532440185547,
+    "train_top1": 0.7177555561065674,
+    "train_top5": 0.9767555594444275,
+    "val_loss": 1.1282017230987549,
+    "val_top1": 0.7372000217437744,
+    "val_top5": 0.9771999716758728,
+    "test_loss": 1.129507064819336,
+    "test_top1": 0.7379000186920166,
+    "test_top5": 0.9761999845504761,
+    "test_top1_macro": 0.7379,
+    "test_top5_macro": 0.9762,
+    "test_precision_macro": 0.7377612583723058,
+    "test_recall_macro": 0.7379,
+    "test_f1_macro": 0.7320335373258225
+  }
+}

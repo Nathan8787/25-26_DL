@@ -1,0 +1,400 @@
+<!DOCTYPE html><html><head>
+      <title>regression_report</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\USER\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.19\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<div align="center">
+  <span style="color:#111827; font-size:40px; font-weight:700;">
+    HW1 Regression Report
+  </span><br>
+  <span style="color:#111827; font-size:40px; font-weight:600;">
+    113024510 廖振宇
+  </span>
+</div>
+<h2 id="1-executive-summary-摘要">1. Executive Summary 摘要 </h2>
+<ul>
+<li>以純 <code>numpy</code> 實作的五層前饋網路（<code>[d, 8, 8, 4, 1]</code>）成功預測建築暖氣負載 (<code>Heating Load</code>)。</li>
+<li>在能源效率資料集 (768 筆) 上，最佳模型於 <strong>第 11,604 個 epoch</strong> 取得 <code>Validation RMS = 0.376</code>，最終測試誤差為 <code>Test RMS = 0.460</code>、<code>MAE = 0.334</code>。</li>
+<li>Permutation Importance 顯示 <code>roof_area</code>, <code>wall_area</code>, <code>relative_compactness</code> 為最關鍵特徵；僅保留單一或少數特徵時效能劇烈下降，證明多特徵整合的重要性。</li>
+</ul>
+<hr>
+<h2 id="2-data--preprocessing-資料與前處理">2. Data &amp; Preprocessing 資料與前處理 </h2>
+<ul>
+<li><strong>資料來源 Dataset</strong>：<code>HW1/datasets/2025_energy_efficiency_data.csv</code>。隨機打散後切分為 <code>Train 461 / Val 115 / Test 192</code>(60/15/25)。</li>
+<li><strong>特徵工程 Feature Engineering</strong>：
+<ul>
+<li>六個連續欄位 (<code>relative_compactness</code> 等) 以訓練集均值與標準差進行 z-score 標準化。</li>
+<li><code>orientation</code> (4 類) 與 <code>glazing_area_distribution</code> (6 類) 透過 one-hot encoding加入模型，並維持固定欄位順序。</li>
+<li>目標變數 <code>heating_load</code> 保留原始尺度。</li>
+</ul>
+</li>
+<li><strong>資料檔案產出 Artifacts</strong>：
+<ul>
+<li><code>artifacts/regression/training_history.csv</code>: 每個 epoch 的 Train/Val MSE、RMS。</li>
+<li><code>results/regression_summary.json</code>: Train/Val/Test 的最終指標。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="3-model--training-setup-模型與訓練設定">3. Model &amp; Training Setup 模型與訓練設定 </h2>
+<ul>
+<li><strong>網路架構 Architecture</strong>：<code>[input_dim, 8, 8, 4, 1]</code>，隱藏層採 ReLU、輸出層線性。權重以 Xavier Uniform 初始化。</li>
+<li><strong>超參數 Hyperparameters</strong>：
+<table>
+<thead>
+<tr>
+<th>參數 Parameter</th>
+<th>值 Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Learning Rate</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>Epoch 上限</td>
+<td>30,000</td>
+</tr>
+<tr>
+<td>Mini-batch Size</td>
+<td>32</td>
+</tr>
+<tr>
+<td>Gradient Clip</td>
+<td>±1.0 (element-wise)</td>
+</tr>
+<tr>
+<td>Early Stopping Patience</td>
+<td>5,000 (監控 Validation RMS)</td>
+</tr>
+<tr>
+<td>Random Seed</td>
+<td>29</td>
+</tr>
+<tr>
+<td>Gradient Check</td>
+<td>Central difference, <code>epsilon=1e-5</code>, 抽樣 10 個權重 + 各層第 1 個 bias；最大相對誤差 &lt; 1e-3</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>訓練流程 Highlights</strong>：
+<ul>
+<li>每個 epoch 重新打散 batch 順序 (<code>seed + epoch</code>)。</li>
+<li>以完整 Train/Val 集計算 RMS 供早停監控。</li>
+<li>儲存最佳驗證表現時的參數 (<code>artifacts/regression/best_model.pkl</code>)。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="4-learning-dynamics-學習過程">4. Learning Dynamics 學習過程 </h2>
+<ul>
+<li><strong>最佳驗證點 Best Epoch</strong>：11,604
+<table>
+<thead>
+<tr>
+<th>指標 Metric</th>
+<th>Train</th>
+<th>Val</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MSE</td>
+<td>0.0941</td>
+<td>0.1414</td>
+</tr>
+<tr>
+<td>RMS</td>
+<td>0.3067</td>
+<td>0.3760</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong>學習曲線 Learning Curve</strong>：<br>
+<img src="../project/figures/regression_learning_curve.png" alt="Learning Curve">
+<ul>
+<li>初期 (≤100 epoch) RMS 急速下降，顯示神經網路快速捕捉主要模式。</li>
+<li>之後平緩且有震盪，早停於 11.6k epoch 附近保留最佳驗證性能。</li>
+<li>大量 epoch 後訓練 RMS 繼續下降但驗證 RMS 未再改善，顯示正規化不足但早停有效避免過度擬合。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="5-performance-evaluation-效能評估">5. Performance Evaluation 效能評估 </h2>
+<ul>
+<li>
+<p><strong>整體指標 Overall Metrics</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>Split</th>
+<th>MSE</th>
+<th>RMS</th>
+<th>MAE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Train</td>
+<td>0.0941</td>
+<td>0.3067</td>
+<td>0.2310</td>
+</tr>
+<tr>
+<td>Val</td>
+<td>0.1414</td>
+<td>0.3760</td>
+<td>0.2993</td>
+</tr>
+<tr>
+<td>Test</td>
+<td>0.2114</td>
+<td><strong>0.4598</strong></td>
+<td>0.3341</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>預測可視化 Prediction Visuals</strong>：</p>
+<ul>
+<li>Train / Val / Test <code>y_true</code> vs <code>y_pred</code>：<br>
+<img src="../project/figures/regression_pred_vs_actual_train.png" alt="Train Scatter"><br>
+<img src="../project/figures/regression_pred_vs_actual_val.png" alt="Val Scatter"><br>
+<img src="../project/figures/regression_pred_vs_actual_test.png" alt="Test Scatter"></li>
+<li>Train/Test 預測與真值折線：<br>
+<img src="../project/figures/regression_pred_vs_label_train.png" alt="Train Sequence"><br>
+<img src="../project/figures/regression_pred_vs_label_test.png" alt="Test Sequence"></li>
+</ul>
+</li>
+<li>
+<p><strong>觀察 Observations</strong>：</p>
+<ul>
+<li>訓練/驗證/測試的散點緊貼對角線，可以看出模型有很好的捕捉到主要趨勢。</li>
+<li>序列圖顯示模型能捕捉趨勢，但在極值樣本 (高負載的情況下) 有明顯低估，這可能是由於資料中高負載樣本較少，導致模型在這些區域的泛化能力較弱。</li>
+<li><strong>整體來說，模型在大部分樣本上表現良好，但在極端值上的表現仍有提升空間。</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="6-feature-analysis-特徵分析">6. Feature Analysis 特徵分析 </h2>
+<h3 id="61-permutation-importance">6.1 Permutation Importance </h3>
+<ul>
+<li>
+<p>檔案：<code>artifacts/regression/feature_importance.csv</code>；視覺化：<code>figures/regression_feature_importance.png</code>。</p>
+</li>
+<li>
+<p>理論概念：<strong>Permutation Importance</strong> 以「擾動後效能下降量」衡量特徵重要性。假設模型在驗證集上的評分函數為 score<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(X, y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>，當第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.854em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span></span></span></span> 個特徵被隨機置換後，所得期望分數下降 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Δ</mi><mi>j</mi></msub><mo>=</mo><mtext>score</mtext><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>−</mo><mtext>score</mtext><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mtext>perm</mtext><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></msub><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">Δ_j = \text{score}(X, y) - \text{score}(X_{\text{perm}(j)}, y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord">Δ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">score</span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1052em;vertical-align:-0.3552em;"></span><span class="mord text"><span class="mord">score</span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">perm</span></span><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>，即為該特徵的貢獻度。由於本題使用 RMS 作為 score 的（分數越低越好），<strong>因此報告中的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Δ</mi><mtext>RMS</mtext></msub><mo>=</mo><mi>R</mi><mi>M</mi><msub><mi>S</mi><mtext>perm</mtext></msub><mo>−</mo><mi>R</mi><mi>M</mi><msub><mi>S</mi><mtext>base</mtext></msub></mrow><annotation encoding="application/x-tex">Δ_\text{RMS} = RMS_\text{perm} - RMS_\text{base}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Δ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord text mtight"><span class="mord mtight">RMS</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">RM</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord text mtight"><span class="mord mtight">perm</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">RM</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord text mtight"><span class="mord mtight">base</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>；值愈大表示該特徵在維持原始關聯性時提供愈多資訊。</strong> 此方法不需重新訓練模型，能直接檢驗既有模型對特徵的依賴程度，也避免了梯度量測受尺度或分布影響的問題。</p>
+</li>
+<li>
+<p>實驗方法：</p>
+<ul>
+<li>預先以早停訓練並保存最佳參數 (<code>best_model.pkl</code>)，評估時固定權重避免重新訓練。</li>
+<li>以驗證集作為評估基準，計算 baseline <code>RMS_base=0.3760</code>。驗證集的使用可避免測試集資訊洩漏。</li>
+<li>先將特徵分組（<code>G1</code>~<code>G8</code>），單一連續欄位為一組，one-hot 類別向量為一組；這在程式中透過 <code>group_mapping</code> 實作，目的是避免多欄 one-hot 被拆散後重要度被稀釋。</li>
+<li>對某一組所有欄位逐欄打亂 (<code>rng.permutation</code>)，保持該欄邊際分布但破壞其與其他欄、目標的對應關係，再以原模型推論新的 <code>RMS_perm</code>。</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Δ</mi><mtext>RMS</mtext></msub><mo>=</mo><mi>R</mi><mi>M</mi><msub><mi>S</mi><mtext>perm</mtext></msub><mo>−</mo><mi>R</mi><mi>M</mi><msub><mi>S</mi><mtext>base</mtext></msub></mrow><annotation encoding="application/x-tex">Δ_\text{RMS} = RMS_\text{perm} - RMS_\text{base}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Δ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord text mtight"><span class="mord mtight">RMS</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">RM</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord text mtight"><span class="mord mtight">perm</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">RM</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord text mtight"><span class="mord mtight">base</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 作為該組的重要度，最後依 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Δ</mi><mtext>RMS</mtext></msub></mrow><annotation encoding="application/x-tex">Δ_\text{RMS}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Δ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord text mtight"><span class="mord mtight">RMS</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 降序排序並輸出 CSV 與長條圖。</li>
+</ul>
+</li>
+<li>
+<p>Top-6 重要度 (RMS 上升量)：</p>
+<p><img src="../project/figures/regression_feature_importance.png" alt="regression_feature_importance"></p>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Group</th>
+<th>Features</th>
+<th>ΔRMS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>G4</code></td>
+<td><code>roof_area</code></td>
+<td><strong>22.01</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>G3</code></td>
+<td><code>wall_area</code></td>
+<td>15.40</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>G1</code></td>
+<td><code>relative_compactness</code></td>
+<td>13.63</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>G5</code></td>
+<td><code>overall_height</code></td>
+<td>8.23</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>G2</code></td>
+<td><code>surface_area</code></td>
+<td>6.23</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>G7</code></td>
+<td><code>orientation_*</code> (4 dims)</td>
+<td>5.63</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>G8</code></td>
+<td><code>gad_*</code> (6 dims)</td>
+<td>3.20</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>G6</code></td>
+<td><code>glazing_area</code></td>
+<td>2.78</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>觀察 Observations：</p>
+<ul>
+<li>面積相關特徵 (<code>roof_area</code>, <code>wall_area</code>, <code>relative_compactness</code>) 重要度最高，顯示建築物的尺寸與形狀是影響暖氣負載的主要因素。</li>
+<li><code>overall_height</code> 亦具顯著影響，可能因為高度影響熱量分布與流動。</li>
+<li><code>orientation</code> (窗戶朝向) 也有中等影響，符合直覺。</li>
+<li><code>glazing_area</code> (窗戶面積) 重要度最低，可能因為資料中窗戶面積變化較小，或其影響被其他面積特徵所掩蓋。</li>
+<li>整體來看，特徵重要度排序基本上與直覺相符，驗證了模型在學習過程中捕捉到合理的物理關聯。</li>
+</ul>
+</li>
+</ul>
+<h3 id="62-feature-subset-evaluation">6.2 Feature Subset Evaluation </h3>
+<ul>
+<li>
+<p>檔案：<code>artifacts/regression/feature_subset_results.csv</code>；圖片：<code>figures/regression_subset_performance.png</code>。</p>
+</li>
+<li>
+<p>實驗方法 Experiment Setup：</p>
+<ul>
+<li>依照 Permutation Importance 排序，從最重要特徵開始逐步加入 (Top-1, Top-3, Top-5)，其他特徵設為 0。</li>
+<li>每組特徵皆重新訓練模型，並以相同超參數與早停條件。</li>
+<li>最終比較Top-K、全特徵與移除 <code>gad_*</code> (G8, 10 維) 的結果並以RMS進行排序。</li>
+</ul>
+<p><img src="../project/figures/regression_subset_performance.png" alt="regression_subset_performance"></p>
+<table>
+<thead>
+<tr>
+<th>Subset</th>
+<th>Included Groups</th>
+<th>#Features</th>
+<th>Val RMS</th>
+<th>Test RMS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Top-1</td>
+<td><code>['G4']</code></td>
+<td>1</td>
+<td>3.9880</td>
+<td>4.3813</td>
+</tr>
+<tr>
+<td>Top-3</td>
+<td><code>['G4','G3','G1']</code></td>
+<td>3</td>
+<td>2.8376</td>
+<td>3.2808</td>
+</tr>
+<tr>
+<td>Top-5</td>
+<td><code>['G4','G3','G1','G5','G2']</code></td>
+<td>5</td>
+<td>2.8285</td>
+<td>3.2618</td>
+</tr>
+<tr>
+<td>All</td>
+<td>所有群組 (16 特徵)</td>
+<td>16</td>
+<td><strong>0.3760</strong></td>
+<td><strong>0.4598</strong></td>
+</tr>
+<tr>
+<td>All-minus-G8</td>
+<td>排除 <code>gad_*</code></td>
+<td>10</td>
+<td>0.3837</td>
+<td>0.6706</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>觀察 Observations：</p>
+<ul>
+<li>僅使用頂尖特徵時 (Top-1~5) 誤差遠高於全特徵，顯示小型網路仍需多種特徵的輸入才能捕捉複雜度。</li>
+<li>移除 <code>glazing_area_distribution</code> (<code>G8</code>) 造成測試 RMS 由 0.46 惡化至 0.67，說明窗戶分布雖未列入 Top-5，仍提供泛化所需訊息。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="7-appendix-附錄">7. Appendix 附錄 </h2>
+<ul>
+<li>
+<p><strong>主要檔案</strong>：</p>
+<ul>
+<li>程式：<code>project/src/regression_pipeline.py</code></li>
+<li>設定：<code>project/src/regression_pipeline.py::CONFIG</code></li>
+<li>模型權重：<code>project/artifacts/regression/best_model.pkl</code></li>
+<li>指標：<code>project/results/regression_summary.json</code></li>
+<li>圖表：<code>project/figures/regression_*.png</code></li>
+</ul>
+</li>
+<li>
+<p><strong>重現步驟 Reproducibility</strong>：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token builtin class-name">cd</span> HW1/project
+python src/regression_pipeline.py
+</code></pre><p>會自動完成前處理、訓練、評估與特徵分析；若要重新產出報告圖表請確保 <code>figures/</code>、<code>artifacts/</code> 可寫入。</p>
+</li>
+</ul>
+<hr>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
