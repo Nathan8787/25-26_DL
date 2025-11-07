@@ -127,7 +127,7 @@ CONFIG: Dict[str, Any] = {
     "cli_overrides": {
         "mode": ["baseline", "stride_filter", "l2_study", "all"],
         "config": "可選外部 YAML 或 JSON 設定檔路徑",
-        "device": ["gpu"],
+        "device": ["cpu", "gpu", "auto"],
     },
 }
 
@@ -188,23 +188,23 @@ def set_seed(seed: int) -> None:
 
 def configure_device(device: str) -> None:
     """根據 CLI 選項配置 TensorFlow 的運算裝置。"""
-    if device == "cpu":
+    requested = device.lower()
+    if requested == "cpu":
+        console.print("[yellow]強制使用 CPU。[/yellow]")
         os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
-    elif device == "gpu":
-        gpus = tf.config.list_physical_devices("GPU")
-        if not gpus:
+        return
+
+    gpus = tf.config.list_physical_devices("GPU")
+    if not gpus:
+        if requested == "gpu":
             console.print("[yellow]未偵測到 GPU，改用 CPU 執行。[/yellow]")
-            os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
         else:
-            for gpu in gpus:
-                tf.config.experimental.set_memory_growth(gpu, True)
-    else:
-        gpus = tf.config.list_physical_devices("GPU")
-        if gpus:
-            for gpu in gpus:
-                tf.config.experimental.set_memory_growth(gpu, True)
-        else:
-            os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+            console.print("[yellow]AUTO 模式未偵測到 GPU，使用 CPU。[/yellow]")
+        os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+        return
+
+    for gpu in gpus:
+        tf.config.experimental.set_memory_growth(gpu, True)
 
 
 def get_active_device_label() -> str:

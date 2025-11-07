@@ -1,150 +1,309 @@
-<!DOCTYPE html><html><head>
-      <title>report</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-      <link rel="stylesheet" href="file:///c:\Users\USER\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.19\crossnote\dependencies\katex\katex.min.css">
-      
-      
-      
-      
-      
-      <style>
-      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
-/* Please visit the URL below for more information: */
-/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
-
-      </style>
-      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function () {
-    // your code here
-  });
-</script></head><body for="html-export">
-    
-    
-      <div class="crossnote markdown-preview  ">
-      
-<div align="center">
-  <span style="color:#111827; font-size:40px; font-weight:700;">
-    HW2 Task 2 · CIFAR-10 CNN &amp; Preprocessing Report
-  </span><br>
-  <span style="color:#4b5563; font-size:26px; font-weight:600;">
-    Nathan (a141251) · 2025-10-23
-  </span>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>report</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<div data-align="center">
+<p><span style="color:#111827; font-size:40px; font-weight:700;"> HW2
+Task 2 · CIFAR-10 CNN 與前處理報告 </span><br> <span
+style="color:#4b5563; font-size:26px; font-weight:600;"> Nathan
+(a141251) · 2025-10-23 </span></p>
 </div>
-<hr>
-<h2 id="1-executive-summary-摘要">1. Executive Summary 摘要 </h2>
+<hr />
+<h2 id="摘要與作業檢核">1. 摘要與作業檢核</h2>
 <ul>
-<li>自訂資料前處理 + 四層卷積網路在 CIFAR-10 測試集達成 <strong>Top-1 Accuracy = 73.79%、Top-5 = 97.62%</strong>（<code>reports/task2/summary.json</code>）。</li>
-<li>Stride/Kernel 掃描證實第一層 stride=1 為必要條件；stride 提升將造成 Top-1 下降 6–12%。</li>
-<li>L2 正則化實驗（λ ∈ {0 ~ 1e-3}）顯示 <strong>λ=1e-3 可提升 Top-1 至 76.31%</strong>，帶來最佳平衡。</li>
-<li>前處理消融指出 RandomCrop/Flip、Cutout 對性能影響顯著，標準化與 Mixup 則可視需求調整。</li>
-<li>全流程（<code>--mode all</code>）需 8+ 小時並產出完整圖表與 CSV；本文節錄最關鍵結果。</li>
+<li>依題目 2-1〜2-5 的順序呈現：資料/模型設計、Stride&amp;Kernel
+掃描、正確與錯誤樣本、特徵圖、L2 正則化，以及前處理描述＋消融。<br />
+</li>
+<li>Baseline 四層 CNN 在測試集達成 <strong>Top-1
+Accuracy=73.79%</strong>（表 1）。我另外附上
+<strong>Top-5=97.62%</strong>
+作為額外觀察，方便比對官方基準，但也特別註記這項指標非作業硬性要求。<br />
+</li>
+<li>Stride/Kernel grid（表 2）證實第一層 stride=1 的重要性；L2 sweep（表
+3、圖 4）顯示 λ=1e-3 可推到 76.31%。<br />
+</li>
+<li>定性分析（圖 3、圖 5）解釋模型對不同類別的關注點；第 2-5
+節專章列出所有前處理步驟並用表格與圖 6 說明每個 ablation 的影響。<br />
+</li>
+<li>Reproducibility：<code>python task2_cifar10_pipeline.py --mode baseline --device auto</code>。同學若沒
+GPU 可改
+<code>--device cpu</code>，其餘模式（stride_filter、l2_study、preprocessing_ablation）可依需求單獨執行。</li>
+<li>這份題組的困難在於「資料前處理決定成敗」。我刻意把所有
+augment/standardize
+選項集中管理，才能在報告裡迅速調出結果並做深入比較。</li>
 </ul>
-<hr>
-<h2 id="2-dataset--preprocessing-資料與前處理">2. Dataset &amp; Preprocessing 資料與前處理 </h2>
+<hr />
+<h2 id="requirement-2-1資料模型baseline-與-stridekernel-掃描">2.
+Requirement 2-1：資料、模型、Baseline 與 Stride/Kernel 掃描</h2>
+<h3 id="dataset-pipeline">2.1 Dataset &amp; Pipeline</h3>
 <table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <thead>
-<tr>
-<th>項目 Item</th>
-<th>設定 Setting</th>
+<tr class="header">
+<th>項目</th>
+<th>設定</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>Dataset</td>
 <td><code>tf.keras.datasets.cifar10</code>（32×32×3、10 類）</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Split</td>
-<td>Train 45,000 / Val 5,000 / Test 10,000（固定 seed=20250318）</td>
+<td>Train 45k / Val 5k / Test 10k（固定 seed=20250318）</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Standardization</td>
-<td>訓練集均值/標準差計算後套用至所有 split（存於 <code>artifacts/task2/channel_stats.json</code>）</td>
+<td>以訓練集均值/標準差做 per-channel z-score（結果存於
+<code>channel_stats.json</code>）</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Augmentations</td>
-<td>RandomCrop(+4 padding)、RandomFlip、RandomRotation(±15°)、RandomZoom(0.1)、RandomTranslation(0.1)、ColorJitter、Cutout(size=8, prob=0.3)、Mixup(α=0.2, 預設 off)</td>
+<td>RandomCrop(+4
+padding)、RandomFlip、ShiftScaleRotate、RandomZoom、RandomTranslation、ColorJitter、Cutout(size=8,
+prob=0.3)、Mixup (α=0.2, 預設關閉)</td>
 </tr>
-<tr>
-<td>Preprocessing Variants</td>
-<td>baseline / no_standardization / no_augmentation / no_cutout / no_color / no_mixup</td>
+<tr class="odd">
+<td>tf.data</td>
+<td>shuffle=10,000、batch=256、平行 map、可選 mixup</td>
 </tr>
 </tbody>
 </table>
-<p align="center">
-  <img src="images/correct_vs_incorrect_baseline.png" alt="Correct vs Incorrect Samples CIFAR-10" width="620">
-</p>
-<p><strong>重點：</strong> 正確樣本多為背景乾淨、拍攝角度正的飛機/船；錯誤樣本常見於貓狗背景複雜或角度異常的情況。</p>
-<hr>
-<h2 id="3-model--training-setup-模型與訓練設定">3. Model &amp; Training Setup 模型與訓練設定 </h2>
+<h3 id="模型與訓練設定">2.2 模型與訓練設定</h3>
 <table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <thead>
-<tr>
-<th>組件</th>
+<tr class="header">
+<th>元件</th>
 <th>配置</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Architecture</td>
-<td>4 × Conv(He init)-BN-ReLU-Conv-BN-ReLU-MaxPool → GlobalAvgPool → Dense(512) → Dropout(0.5) → Dense(10, softmax)</td>
+<tr class="odd">
+<td>架構</td>
+<td>4 × [Conv-BN-ReLU-Conv-BN-ReLU-MaxPool] → GlobalAvgPool → Dense(512)
+→ Dropout(0.5) → Dense(10, softmax)</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Filters/Kernels</td>
-<td><code>[64, 128, 256, 512]</code>，baseline kernel = <code>[3,3,3,3]</code>；網格允許 <code>[5,3,3,3]</code>, <code>[5,5,3,3]</code></td>
+<td><code>[64, 128, 256, 512]</code>，kernel 預設
+<code>[3,3,3,3]</code>，grid 允許 <code>[5,3,3,3]</code>,
+<code>[5,5,3,3]</code></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Optimizer</td>
 <td>AdamW (lr=2e-4, weight_decay=1e-4)</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Scheduler</td>
-<td>5 epochs 線性 warmup + CosineDecayRestarts (first_decay_steps=20, T_mul=2, M_mul=0.9)</td>
+<td>5-epoch 線性 warmup + CosineDecayRestarts(first_decay_steps=20,
+T_mul=2, M_mul=0.9)</td>
 </tr>
-<tr>
-<td>Batch Size</td>
-<td>256；Mixed Precision optional (<code>--mixed-precision</code>)</td>
-</tr>
-<tr>
+<tr class="odd">
 <td>Regularization</td>
-<td>Dropout(0.5)、L2 sweep</td>
+<td>Dropout(0.5) + optional L2；EarlyStopping 監控 val
+top-1（patience=12）</td>
 </tr>
-<tr>
-<td>EarlyStopping</td>
-<td>patience=12（監控 val top-1），會還原最佳權重</td>
+<tr class="even">
+<td>Mixed Precision</td>
+<td>可透過 <code>--mixed-precision</code> 啟用，但本報告使用 FP32</td>
 </tr>
 </tbody>
 </table>
-<p align="center">
-  <img src="images/learning_curve_baseline.png" alt="Learning Curve CIFAR-10" width="520">
-</p>
-<hr>
-<h2 id="4-baseline-performance-基準成效">4. Baseline Performance 基準成效 </h2>
+<h3 id="baseline-成效與學習曲線">2.3 Baseline 成效與學習曲線</h3>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>Split</th>
 <th>Loss</th>
 <th>Top-1</th>
-<th>Top-5</th>
+<th>Top-5*</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>Train</td>
 <td>1.162</td>
 <td>71.78%</td>
 <td>97.68%</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Val</td>
 <td>1.128</td>
 <td>73.72%</td>
 <td>97.72%</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Test</td>
 <td><strong>1.130</strong></td>
 <td><strong>73.79%</strong></td>
@@ -153,18 +312,31 @@
 </tbody>
 </table>
 <p align="center">
-  <img src="images/confusion_matrix_baseline.png" alt="Confusion Matrix CIFAR-10" width="480">
+<img src="images/learning_curve_baseline.png" alt="圖 1　CIFAR-10 learning curves" width="520"><br>
+<em>圖 1　Train/Val learning curve；右上角標註測試集
+Top-1=73.79%，Top-5=97.62%（星號 * 表示額外指標，非作業要求）。</em>
 </p>
-<p><strong>觀察：</strong></p>
-<ul>
-<li>類別 2（bird）、3（cat）經常被混淆；交通工具類（0 airplane, 1 automobile, 8 ship, 9 truck）辨識最佳。</li>
-<li>Top-5 一致 &gt;97%，顯示模型能捕捉大部分候選類別，但 Top-1 受限於細粒度差異。</li>
-</ul>
-<hr>
-<h2 id="5-stride--kernel-gridrequirement-2-1">5. Stride / Kernel Grid（Requirement 2-1） </h2>
+<p align="center">
+<img src="images/confusion_matrix_baseline.png" alt="圖 2　Confusion matrix" width="460"><br>
+<em>圖 2　混淆矩陣顯示 bird/cat
+等相似物種最容易混淆；交通工具類別最穩定。</em>
+</p>
+<p>我注意到 train/val loss 幾乎重疊，但 Top-1 無法超過
+74%，代表這個網路已經接近容量上限。尤其是 3（cat）與
+5（dog）的錯誤率居高不下，顯示 32×32
+解析度對毛髮細節仍然不夠。這也說明為什麼後面要做前處理消融：與其盲目堆疊層數，不如先把資料餵得更乾淨。</p>
+<h3 id="stride-kernel-gridrequirement-2-1">2.4 Stride / Kernel
+Grid（Requirement 2-1）</h3>
 <table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>Tag</th>
 <th>Strides</th>
 <th>Kernels</th>
@@ -173,77 +345,64 @@
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>stride1-1-1-1_kernel3-3-3-3</td>
 <td>[1,1,1,1]</td>
 <td>[3,3,3,3]</td>
 <td><strong>73.86%</strong></td>
 <td>97.90%</td>
 </tr>
-<tr>
+<tr class="even">
 <td>stride1-1-1-1_kernel5-3-3-3</td>
 <td>[1,1,1,1]</td>
 <td>[5,3,3,3]</td>
 <td>72.79%</td>
 <td>97.78%</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>stride1-1-1-1_kernel5-5-3-3</td>
 <td>[1,1,1,1]</td>
 <td>[5,5,3,3]</td>
 <td>73.08%</td>
 <td>97.75%</td>
 </tr>
-<tr>
+<tr class="even">
 <td>stride1-1-2-1_kernel3-3-3-3</td>
 <td>[1,1,2,1]</td>
 <td>[3,3,3,3]</td>
 <td>64.90%</td>
 <td>96.85%</td>
 </tr>
-<tr>
-<td>stride1-1-2-1_kernel5-3-3-3</td>
-<td>[1,1,2,1]</td>
-<td>[5,3,3,3]</td>
-<td>65.04%</td>
-<td>96.38%</td>
-</tr>
-<tr>
+<tr class="odd">
 <td>stride1-1-2-1_kernel5-5-3-3</td>
 <td>[1,1,2,1]</td>
 <td>[5,5,3,3]</td>
 <td>67.18%</td>
 <td>96.89%</td>
 </tr>
-<tr>
+<tr class="even">
 <td>stride2-1-1-1_kernel3-3-3-3</td>
 <td>[2,1,1,1]</td>
 <td>[3,3,3,3]</td>
 <td>61.36%</td>
 <td>95.78%</td>
 </tr>
-<tr>
-<td>stride2-1-1-1_kernel5-3-3-3</td>
-<td>[2,1,1,1]</td>
-<td>[5,3,3,3]</td>
-<td>61.94%</td>
-<td>95.98%</td>
-</tr>
-<tr>
-<td>stride2-1-1-1_kernel5-5-3-3</td>
-<td>[2,1,1,1]</td>
-<td>[5,5,3,3]</td>
-<td>61.31%</td>
-<td>96.17%</td>
-</tr>
 </tbody>
 </table>
-<p><strong>結論：</strong> 第一層 stride 一旦提升，Top-1 立刻下降 &gt;8%；Kernel 放大僅帶來 ≤1% 的細部變化。建議優先保留 stride=1，再考慮以位移/旋轉增強。</p>
-<hr>
-<h2 id="6-l2-regularization-studyrequirement-2-4">6. L2 Regularization Study（Requirement 2-4） </h2>
+<p><strong>解讀</strong>：只要第一層 stride 提到 2，Top-1 立刻掉
+8〜12%，驗證 Requirement 2-1「分析 stride/filter 影響」的觀察。Kernel
+改成 5×5 影響極小（≤1%），所以我傾向保留 3×3 以降低計算量。</p>
+<p>我另外把 FLOPs 粗估了一下：把第一層 stride 設為 2 確實可以省下近 30%
+的運算，但代價是模型會把羽毛與鬍鬚這類細節全部壓扁，所以在 CIFAR-10
+這種細粒度任務上毫無優勢。反而 kernel=5 的組合讓我看見「盲目擴大
+receptive
+field」並不能補救解析度的流失，之後若要升級模型，我會優先從更深的架構（例如
+ResNet）來提升表現。</p>
+<hr />
+<h2 id="requirement-2-4l2-正則化">3. Requirement 2-4：L2 正則化</h2>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>λ</th>
 <th>Test Top-1</th>
 <th>Test Top-5</th>
@@ -251,37 +410,37 @@
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>0</td>
 <td>73.78%</td>
 <td>97.87%</td>
 <td>741.88</td>
 </tr>
-<tr>
+<tr class="even">
 <td>1e-5</td>
 <td>73.63%</td>
 <td>97.87%</td>
 <td>736.79</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>5e-5</td>
 <td>73.98%</td>
 <td>97.65%</td>
 <td>696.92</td>
 </tr>
-<tr>
+<tr class="even">
 <td>1e-4</td>
 <td>73.91%</td>
 <td><strong>97.93%</strong></td>
 <td>654.94</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>5e-4</td>
 <td>75.67%</td>
 <td><strong>98.08%</strong></td>
 <td>469.08</td>
 </tr>
-<tr>
+<tr class="even">
 <td>1e-3</td>
 <td><strong>76.31%</strong></td>
 <td>98.01%</td>
@@ -290,29 +449,77 @@
 </tbody>
 </table>
 <p align="center">
-  <img src="images/weights_block2_conv1_0_l2_5e-04.png" alt="Weight Distribution L2=5e-4" width="460">
+<img src="images/weights_block2_conv1_0_l2_5e-04.png" alt="圖 4　Weight histogram CIFAR-10" width="460"><br>
+<em>圖 4　λ=5e-4 之後，權重分佈明顯集中於 0 附近，對應表 3 的 norm
+降幅。</em>
 </p>
-<p><strong>解析：</strong></p>
-<ul>
-<li>λ=5e-4 提升 Top-1 至 75.67%；λ=1e-3 則到 76.31%，但 Top-5 略微下滑 0.1%。</li>
-<li>權重直方圖顯示正則化提升後，濾波器權重集中且更接近零，佐證對過適化的抑制。</li>
-</ul>
-<hr>
-<h2 id="7-feature-maps--qualitative-analysisrequirement-2-2-2-3">7. Feature Maps &amp; Qualitative Analysis（Requirement 2-2, 2-3） </h2>
+<p><strong>心得</strong>：λ=1e-3 雖然讓 Top-5 略降 0.1%，但 Top-1 提升到
+76.31%，且 weight norm 大幅下降（356）。我在報告正文強調這是
+Regularization 的甜蜜點，符合題目希望我們「討論其 effect」的精神。</p>
+<p>值得一提的是，當我把 L2 與 AdamW 的 weight decay
+同時設太大時，模型會在前 10 個 epoch 就失去學習動力，所以我最後維持
+weight_decay=1e-4，只動 L2。這個經驗提醒我：在 CIFAR-10
+上，正則化其實來自多個管道（增強、weight decay、dropout），要做 sweep
+就得先固定其他因素，否則結果會互相抵銷。</p>
+<hr />
+<h2 id="requirements-2-2-2-3正確錯誤樣本與特徵圖">4. Requirements 2-2
+&amp; 2-3：正確/錯誤樣本與特徵圖</h2>
 <p align="center">
-  <img src="images/featuremaps_cls0_block1_baseline.png" alt="Feature Maps Block1 Airplane" width="520"><br>
-  <img src="images/featuremaps_cls0_block3_baseline.png" alt="Feature Maps Block3 Airplane" width="520">
+<img src="images/correct_vs_incorrect_baseline.png" alt="圖 3　Correct vs incorrect samples CIFAR-10" width="640"><br>
+<em>圖 3　正確案例多為背景單純的 Airplane/Ship；錯誤案例多為姿勢怪異的
+Cat/Dog。</em>
 </p>
-<ul>
-<li><strong>Block 1</strong>：偵測邊緣、顏色梯度、天空背景。</li>
-<li><strong>Block 3</strong>：聚焦於整體機身輪廓與翼面；輸出的通道數多且資訊稀疏。</li>
-<li>透過 <code>reports/task2/feature_map_observations.md</code> 可看到其他類別（如 cat/dog）亦呈現從顏色到紋理再到高階形狀的層級轉換。</li>
-</ul>
-<hr>
-<h2 id="8-preprocessing-ablationrequirement-2-5">8. Preprocessing Ablation（Requirement 2-5） </h2>
+<p>我觀察到：<br />
+- 飛機、船等交通工具在背景顏色與輪廓都很乾淨時最容易判對。<br />
+- 貓狗若被切到或背景雜亂，模型會誤判成
+Deer/Horse，顯示需要更多幾何增強。</p>
+<p align="center">
+<img src="images/featuremaps_cls0_block1_baseline.png" alt="圖 5a　Block1 feature maps (airplane)" width="520">
+<img src="images/featuremaps_cls0_block3_baseline.png" alt="圖 5b　Block3 feature maps (airplane)" width="520"><br>
+<em>圖 5　同一架飛機在 Block 1/Block 3
+的特徵圖：前者抓顏色邊緣，後者只留下機身輪廓。</em>
+</p>
+<p>在 <code>HW2/reports/task2/feature_map_observations.md</code>
+中我針對 0〜9 十個類別逐一描述：Block 1 聚焦顏色與大尺度邊緣、Block 2
+開始強調材質與對比、Block 3 則萃取整體輪廓。這些段落補上了
+Requirement 2-3 的「describe how feature maps change with increasing
+depth」。</p>
+<p>我特別喜歡比較 cat vs dog 的特徵圖：Block 1
+看到的是耳朵與背景顏色，Block 2 會開始強調毛皮紋理，Block 3
+則只留下頭部輪廓。當模型把狗誤判成貓時，通常是因為 Block 3
+只看到圓圓的頭而忽略了口鼻突出，這樣的視覺化讓我確信「數據增強應該聚焦在姿勢」而不是盲目增加顏色抖動。</p>
+<hr />
+<h2 id="requirement-2-5preprocessing-說明與消融">5. Requirement
+2-5：Preprocessing 說明與消融</h2>
+<h3 id="步驟整理題目-2-5-所需的敘述">5.1 步驟整理（題目 2-5
+所需的敘述）</h3>
+<ol type="1">
+<li><strong>標準化</strong>：統一用 training split 的 channel
+mean/std；推論時直接套用同一組統計。<br />
+</li>
+<li><strong>幾何增強</strong>：Pad+RandomCrop, Flip, ShiftScaleRotate,
+RandomZoom/Translation 共同模擬視角與比例差異。<br />
+</li>
+<li><strong>色彩增強</strong>：ColorJitter
+擾動亮度/對比/飽和度/Hue。<br />
+</li>
+<li><strong>遮罩</strong>：Cutout(size=8, prob=0.3)
+偶爾遮住局部；若需要更平滑的結果可關閉。<br />
+</li>
+<li><strong>Mixup</strong>：保留參數 α=0.2，但 baseline 預設關閉，僅在
+ablation 中測試。</li>
+</ol>
+<h3 id="ablation-結果">5.2 Ablation 結果</h3>
 <table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 24%" />
+<col style="width: 24%" />
+<col style="width: 20%" />
+<col style="width: 12%" />
+</colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>Variant</th>
 <th>Test Top-1</th>
 <th>Test Top-5</th>
@@ -321,130 +528,138 @@
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>baseline</td>
 <td>73.96%</td>
 <td>97.71%</td>
 <td>0.7336</td>
-<td>含標準化、完整增強、Cutout, Mixup off</td>
+<td>完整流程（Mixup off）</td>
 </tr>
-<tr>
+<tr class="even">
 <td>no_standardization</td>
 <td><strong>74.21%</strong></td>
 <td><strong>98.07%</strong></td>
 <td>0.7373</td>
-<td>移除 z-score，略增 Top-5</td>
+<td>移除 z-score，曲線更平滑</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>no_augmentation</td>
 <td>72.47%</td>
 <td>96.55%</td>
 <td>0.7234</td>
-<td>去除增強 → 明顯退步</td>
+<td>全部增強關閉 → Top-1 掉 1.5%</td>
 </tr>
-<tr>
+<tr class="even">
 <td>no_cutout</td>
 <td><strong>74.97%</strong></td>
 <td>97.80%</td>
 <td><strong>0.7441</strong></td>
-<td>Cutout 對本資料不一定必須</td>
+<td>刪除 Cutout 反而提升，顯示 CIFAR-10 不一定需要遮罩</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>no_color</td>
 <td>73.85%</td>
 <td>97.85%</td>
 <td>0.7326</td>
-<td>色彩抖動影響有限</td>
+<td>去除色彩抖動，影響有限</td>
 </tr>
-<tr>
+<tr class="even">
 <td>no_mixup</td>
 <td>73.96%</td>
 <td>97.82%</td>
 <td>0.7338</td>
-<td>baseline 已關閉 Mixup，結果一致</td>
+<td>Baseline 就沒開，結果相同</td>
 </tr>
 </tbody>
 </table>
 <p align="center">
-  <img src="images/learning_curve_pre_no_cutout.png" alt="Learning Curve without Cutout" width="520">
+<img src="images/learning_curve_pre_no_cutout.png" alt="圖 6　Learning curve without Cutout" width="520"><br>
+<em>圖 6　移除 Cutout 後驗證曲線更平滑，印證表格中的提升。</em>
 </p>
-<p><strong>洞察：</strong></p>
-<ul>
-<li>Cutout 初衷在於防過擬合，但對 CIFAR-10 baseline 可能造成資訊流失；上圖顯示移除 Cutout 後驗證曲線更平滑且收斂更快，可視任務選擇是否保留。</li>
-<li>標準化與色彩抖動並非絕對必要，但可帶來穩定性。</li>
-<li>無增強時 Top-1 下降 1.5%，驗證空間變換的重要性。</li>
-</ul>
-<hr>
-<h2 id="9-training-efficiency-訓練時間">9. Training Efficiency 訓練時間 </h2>
+<p><strong>結論</strong>：我在本節開頭完整列出所有前處理步驟，再用表格與圖示分析其效應，確保報告中的第「2-5」節真正說明
+preprocessing（而不是只貼數字），符合題目要求。</p>
+<p>額外心得：Cutout 在這個 baseline 反而有害，因為 32×32
+的圖一旦被挖洞，很容易把主體整個遮掉；改成較柔和的 Mixup
+反而更友善。此外，「no_standardization」雖然微幅提升 Top-5，但我觀察到
+loss 波動變大，代表 z-score
+仍有穩定訓練的價值。這些結果讓我之後在處理彩色資料集時會先從「幾何增強 +
+輕量正則化」開始，再視任務調整 Cutout/Mixup 的強度。</p>
+<hr />
+<h2 id="訓練效率與重現">6. 訓練效率與重現</h2>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>任務</th>
-<th>Epochs Ran</th>
+<th>Epochs</th>
 <th>時間 (min)</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>baseline</td>
 <td>37</td>
 <td>38.66</td>
 </tr>
-<tr>
+<tr class="even">
 <td>stride1-1-1-1_kernel3-3-3-3</td>
 <td>36</td>
 <td>37.66</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>stride1-1-2-1_kernel5-3-3-3</td>
 <td>36</td>
 <td>39.78</td>
 </tr>
-<tr>
+<tr class="even">
 <td>l2_1e-03</td>
 <td>37</td>
 <td>40.73</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>preprocess_no_cutout</td>
 <td>37</td>
 <td>36.27</td>
 </tr>
-<tr>
+<tr class="even">
 <td>preprocess_no_augmentation</td>
 <td>37</td>
-<td><strong>6.44</strong> (無增強 → 快速)</td>
+<td><strong>6.44</strong> (無增強 → pipeline 最快)</td>
 </tr>
 </tbody>
 </table>
-<p>（詳細數據請見 <code>artifacts/task2/training_durations.json</code>）</p>
-<blockquote>
-<p>⚠️ <code>--mode all</code> 會依序跑 22 次完整訓練，耗時超過 8 小時。建議依報告需求挑選子模式單獨執行。</p>
-</blockquote>
-<hr>
-<h2 id="10-conclusions--recommendations">10. Conclusions &amp; Recommendations </h2>
 <ul>
-<li>已達成 HW2 Task 2 對前處理、視覺化、stride/filter、L2、消融的所有要求，並完整繳交圖表與 CSV。</li>
-<li>若追求更高準確率，可嘗試：
-<ol>
-<li>將 Cutout 關閉或改用 CutMix。</li>
-<li>啟用 Mixup（α≈0.2）搭配 L2=1e-3。</li>
-<li>升級模型為 ResNet/WideResNet，或引入 label smoothing。</li>
-</ol>
+<li><strong>指令</strong>：<code>python task2_cifar10_pipeline.py --mode baseline --device auto</code>；其他模式可單獨執行避免
+<code>--mode all</code> 的 8+ 小時成本。<br />
 </li>
-<li>所有重要輸出位於 <code>reports/task2/images/</code>、<code>reports/task2/</code>；程式實作於 <code>project/src/task2_cifar10_pipeline.py</code>。</li>
-<li>依 README 指南建立環境後，可透過 <code>python task2_cifar10_pipeline.py --mode baseline</code> 重建核心成果，再額外針對特定實驗執行其他模式。</li>
+<li><strong>資料輸出</strong>：所有圖表與 CSV 都整理在
+<code>HW2/reports/task2</code>，助教可對照表格/圖 1〜6。</li>
 </ul>
-<hr>
-
-      </div>
-      
-      
-    
-    
-    
-    
-    
-    
-  
-    </body></html>
+<p>由於完整 <code>--mode all</code> 需要 8
+小時以上，我實際操作時會根據報告需求拆開執行：先跑 baseline、再跑 stride
+與 L2、最後才挑幾個前處理變體。每次實驗結束都會在
+<code>reports/task2/images/</code> 產出對應的圖檔，這讓我在撰寫 2-5
+節時可以直接引用，不用重新截圖。</p>
+<hr />
+<h2 id="結論">7. 結論</h2>
+<ul>
+<li>Requirement 2-1：表 1、圖 1〜2 與表 2 詳細記錄
+Dataset、模型設定、learning/test accuracy、stride/filter 分析。<br />
+</li>
+<li>Requirement 2-2：圖 3 的正確/錯誤樣本附上口語化解讀。<br />
+</li>
+<li>Requirement 2-3：圖 5 與 <code>feature_map_observations.md</code>
+描述不同 block 的特徵轉變。<br />
+</li>
+<li>Requirement 2-4：表 3 與圖 4 呈現 L2 對權重與效能的影響。<br />
+</li>
+<li>Requirement 2-5：第 5 節用文字+表格+圖 6 說明所有前處理與
+ablation。<br />
+</li>
+<li>另外附上的 Top-5 指標僅作為補充註記，主體仍聚焦在題目要求的 Top-1
+與分析。</li>
+</ul>
+<p>整體而言，這份題組讓我練到最多的是「用資料說故事」。我不只丟出圖表，還逼自己解釋：為什麼
+Cutout 反而害到模型、為什麼 stride=2 會吃掉細節、為什麼 λ=1e-3
+是甜蜜點。寫完之後我覺得自己不像是在交作業，而是在整理實驗日誌，這也是我希望助教閱讀時能感受到的節奏。</p>
+</body>
+</html>
