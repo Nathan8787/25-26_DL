@@ -1,0 +1,62 @@
+Opened: Monday, 3 November 2025, 12:00 AM
+Due: Tuesday, 25 November 2025, 11:59 PM
+1. Please submit homework in zip format.
+2. The submission deadline is 11/25 (Tue.) 23:59. 
+3. Name the file as hw3_StudentID. 
+4. The zip file should contain the code and the report.
+
+====GRADING STANDARDS====
+
+1. Construct a Standard RNN Model
+
+   (1) Describe the architecture of the RNN network (5 points).
+
+   (2) Plot the learning curve (Loss vs. Epoch) (5 points).
+
+   (3) Plot the training error rate curve (Training Error Rate vs. Epoch) (5 points).
+
+(Or show the final result not necessarily using charts.)
+
+   (4) Plot the validation error rate curve (Validation Error Rate vs. Epoch) (5 points).
+
+(Or show the final result not necessarily using charts.)
+
+2. Select 5 Nodes During the Training Process and Display the Text Outputs (15 points)
+
+3. Compare the Impact of Different Hidden State Sizes and Sequence Lengths on Training (10 points)
+
+   - Hints: You can plot the results of different hidden layer sizes and sequence lengths on the same "Training Loss vs. Epoch" chart and use text to explain how parameter sizes affect the results.
+
+   - Hints: Alternatively, you can create a "Training Loss vs. Parameter Sizes" chart and describe how parameter sizes affect the results.
+
+4-1. Construct an RNN Model (Based on LSTM)
+
+   (1) Describe the RNN (LSTM) network architecture (4.5 points)
+
+   (2) Plot the learning curve (Loss vs. Epoch) (4.5 points)
+
+   (3) Plot the training error rate curve (Training Error Rate vs. Epoch) (4.5 points)
+
+(Or show the final result not necessarily using charts.)
+
+   (4) Plot the validation error rate curve (Validation Error Rate vs. Epoch) (4.5 points)
+
+(Or show the final result not necessarily using charts.)
+
+4-1-1. Discuss the differences in the results between the standard RNN and LSTM using text (2 points)
+
+4-2. Select 5 Nodes During the Training Process and Display the Text Outputs  (13 points)
+
+4-2-1. Discuss the differences in the results between the standard RNN and LSTM using text (2 points)
+
+4-3. Compare the Impact of Different Hidden State Sizes and Sequence Lengths on Training (8 points)
+
+   - Hints: You can plot the results of different hidden layer sizes and sequence lengths on the same "Training Loss vs. Epoch" chart and use text to explain how parameter sizes affect the results.
+
+   - Hints: Alternatively, you can create a "Training Loss vs. Parameter Sizes" chart and describe how parameter sizes affect the results.
+
+4-3-1. Discuss the differences in the results between the standard RNN and LSTM using text (2 points)
+
+5. Using Words Related to the Dataset as Input, Generate Text Using the RNN or LSTM Model (10 points)
+
+HW3 .zip HW3 .zip3 November 2025, 9:32 PM

@@ -1,0 +1,269 @@
+<!DOCTYPE html><html><head>
+      <title>report</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\USER\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<div align="center">
+  <span style="color:#111827; font-size:40px; font-weight:700;">
+    HW3 · Shakespeare RNN Report
+  </span><br>
+  <span style="color:#4b5563; font-size:26px; font-weight:600;">
+    Nathan (a141251) · 2025-11-25
+  </span>
+</div>
+<hr>
+<h2 id="0-overview--setup">0. Overview &amp; Setup </h2>
+<p>這次的作業是RNN並搭配 Shakespeare corpus (train/valid 依提供檔)的資料。我的框架是：PyTorch + GPU AMP 混合精度，輸出統一在 <code>plots/</code>, <code>outputs/</code>, <code>checkpoints/</code>。亂數種子 113024510，<strong>並且每個 batch 的 hidden state 依作業提示重設為 0。</strong></p>
+<p>重點設定：</p>
+<ul>
+<li>Optimizer: Adam, lr=0.002, clip_grad_norm=5, batch=256</li>
+<li>Epochs: 5（patience=5，保證 5 個 breakpoints）</li>
+<li>Model: RNN / LSTM，hidden size = [64, 128, 256] 與 seq_len = [50, 100, 150]，其中Baseline為 hs=128, seq=100。</li>
+<li>評估：loss、BPC (=loss/ln2)、acc、err</li>
+</ul>
+<p>Observation（整體）：RNN 與 LSTM 都跑 5 epoch；LSTM 在相同設定下收斂更快、指標更好，尤其 hidden size 擴充到 256 時最明顯，以下逐段詳述。</p>
+<hr>
+<h2 id="1-standard-rnn">1. Standard RNN </h2>
+<h3 id="11-架構與設定">1.1 架構與設定 </h3>
+<p>Embedding → RNN(hidden=128, layers=2, dropout=0.25, batch_first) → Linear → vocab。</p>
+<h3 id="12-學習曲線與指標rnn-vs-lstm-對照">1.2 學習曲線與指標（RNN vs LSTM 對照） </h3>
+<ul>
+<li><img src="plots/comparison_rnn_vs_lstm.png" alt="RNN vs LSTM Loss"></li>
+<li><img src="plots/comparison_rnn_vs_lstm_error.png" alt="RNN vs LSTM Error"></li>
+<li><img src="plots/comparison_rnn_vs_lstm_bpc.png" alt="RNN vs LSTM BPC"></li>
+</ul>
+<p>RNN baseline (seq_len=100, hs=128)：</p>
+<table>
+<thead>
+<tr>
+<th>Epoch</th>
+<th>Train Loss</th>
+<th>Train BPC</th>
+<th>Train Acc</th>
+<th>Valid Loss</th>
+<th>Valid BPC</th>
+<th>Valid Acc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>best (1)</strong></td>
+<td>1.6195</td>
+<td>2.3364</td>
+<td>0.5137</td>
+<td><strong>1.6089</strong></td>
+<td>2.3211</td>
+<td>0.5210</td>
+</tr>
+<tr>
+<td>last (5)</td>
+<td>1.5532</td>
+<td>2.2408</td>
+<td>0.5297</td>
+<td>1.6106</td>
+<td>2.3236</td>
+<td>0.5228</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observation（RNN 指標）：最佳在第 1 epoch，之後 valid loss 幾乎不變、acc 只有 0.52 左右，BPC ~2.32，顯示模型快到頂且能力有限。</strong></p>
+<h3 id="13-5-個訓練截點生成rnn-溫度06-seedthe--長度100">1.3 5 個訓練截點生成（RNN, 溫度=0.6, seed="The ", 長度=100） </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>[Epoch1] The sense the king with a cleak to a father were when the world.
+GLOUCESTER:
+My leave of the grow her b
+
+[Epoch2] The great than the set thee hence.
+First Corent;
+Let the time you to the hands, when have brave me, the
+
+[Epoch3] The enterpain and so mistress and this are and scholer to say the wind of the brother's blessitious, and
+
+[Epoch4] The answer and grace and both of the rest.
+DESDEMONA:
+She were here that shall stand, that where the lo
+
+[Epoch5] The for the law to the consent, by this sons I am seem that they sent of the death, dead; and thou took 
+</code></pre><p><strong>Observation（RNN 生成）：早期假詞、斷句多；第 3–4 截點開始出現較長片段，但仍有缺字與怪詞；第 5 截點可讀性稍好但雜訊依舊。RNN 對長程依賴掌握有限。</strong></p>
+<h3 id="14-rnn-超參數比較">1.4 RNN 超參數比較 </h3>
+<p>Hidden size（seq=100）：</p>
+<ul>
+<li><img src="plots/comparison_hidden_size.png" alt="RNN Hidden Size Loss"></li>
+<li><img src="plots/comparison_hidden_size_error.png" alt="RNN Hidden Size Error"></li>
+<li><img src="plots/comparison_hidden_size_bpc.png" alt="RNN Hidden Size BPC"></li>
+</ul>
+<p>最佳驗證 loss：hs64=1.7561(e5), hs128=1.6089(e1), <strong>hs256=1.4975(e3)</strong>。</p>
+<p><strong>Observation：hs256 提升最明顯；hs64 欠擬合；隨 hidden 變大，loss/err/BPC 三條曲線都下移，但仍不及 LSTM。</strong></p>
+<p>Sequence length（hs=128）：</p>
+<ul>
+<li><img src="plots/comparison_seq_len.png" alt="RNN Seq Len Loss"></li>
+<li><img src="plots/comparison_seq_len_error.png" alt="RNN Seq Len Error"></li>
+<li><img src="plots/comparison_seq_len_bpc.png" alt="RNN Seq Len BPC"></li>
+</ul>
+<p>最佳驗證 loss：seq50=1.6221(e5), seq100=1.6089(e1), <strong>seq150=1.5956(e3)</strong>。</p>
+<p><strong>Observation：seq150 略優於 seq100，seq50 最差；拉長序列幫助有限，仍受 RNN 結構瓶頸。</strong></p>
+<hr>
+<h2 id="2-lstm重做-13-並比較">2. LSTM（重做 1–3 並比較） </h2>
+<h3 id="21-架構與設定">2.1 架構與設定 </h3>
+<p>Embedding → LSTM(hidden=128, layers=2, dropout=0.25) → Linear。</p>
+<h3 id="22-學習曲線與指標">2.2 學習曲線與指標 </h3>
+<p>同上圖（RNN vs LSTM），LSTM 曲線顯著低於 RNN。</p>
+<p>LSTM baseline (seq_len=100, hs=128)：</p>
+<table>
+<thead>
+<tr>
+<th>Epoch</th>
+<th>Train Loss</th>
+<th>Train BPC</th>
+<th>Train Acc</th>
+<th>Valid Loss</th>
+<th>Valid BPC</th>
+<th>Valid Acc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>best (3)</strong></td>
+<td>1.3468</td>
+<td>1.9430</td>
+<td>0.5821</td>
+<td><strong>1.4423</strong></td>
+<td>2.0808</td>
+<td>0.5698</td>
+</tr>
+<tr>
+<td>last (5)</td>
+<td>1.3344</td>
+<td>1.9251</td>
+<td>0.5851</td>
+<td>1.4538</td>
+<td>2.0974</td>
+<td>0.5692</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observation（LSTM 指標）：驗證 loss 比 RNN 低約 0.17，acc 高約 4–5%，BPC 也顯著下降；在 3–5 epoch 即穩定，收斂較快。</strong></p>
+<h3 id="23-5-個訓練截點生成lstm-溫度06-seedthe--長度100">2.3 5 個訓練截點生成（LSTM, 溫度=0.6, seed="The ", 長度=100） </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>[Epoch1] The house of this fair plague, as thou shalt not father.
+LUCY:
+Let me think it is so spoke more to him.
+
+[Epoch2] The lady so life and love him in her,
+So banish'd in my brother with their seas,
+Some more from the fres
+
+[Epoch3] The company of his master's reserved,
+Appointed the wind, and all the conscience
+Is sworn before the Fre
+
+[Epoch4] The counsel will be a patience that is awhile;
+So play me and with my heart from her image.
+COMINIUS:
+C
+
+[Epoch5] The Duke of Salisbury and Montague was,
+I will be false to make to the bond.
+TOUCHSTONE:
+I think there 
+</code></pre><p><strong>Observation（LSTM 生成）：第 1 個截點就能產生可讀台詞；第 3、5 截點句法與語意更自然，角色名常出現，連貫度明顯優於 RNN。</strong></p>
+<h3 id="24-lstm-超參數比較">2.4 LSTM 超參數比較 </h3>
+<p>Hidden size：</p>
+<ul>
+<li><img src="plots/comparison_lstm_hidden_size.png" alt="LSTM Hidden Size Loss"></li>
+<li><img src="plots/comparison_lstm_hidden_size_error.png" alt="LSTM Hidden Size Error"></li>
+<li><img src="plots/comparison_lstm_hidden_size_bpc.png" alt="LSTM Hidden Size BPC"></li>
+</ul>
+<p>驗證 loss：hs64=1.5718(e5), hs128=1.4423(e3), <strong>hs256=1.3905(e1)</strong>。</p>
+<p><strong>Observation：hs256 在第 1 個 epoch 就達最佳，容量足且收斂快，因此我會鎖定這組。</strong></p>
+<p>Sequence length：</p>
+<ul>
+<li><img src="plots/comparison_lstm_seq_len.png" alt="LSTM Seq Len Loss"></li>
+<li><img src="plots/comparison_lstm_seq_len_error.png" alt="LSTM Seq Len Error"></li>
+<li><img src="plots/comparison_lstm_seq_len_bpc.png" alt="LSTM Seq Len BPC"></li>
+</ul>
+<p>驗證 loss：seq50=1.4948(e5), <strong>seq100=1.4423(e3)</strong>, seq150=1.4443(e5)。</p>
+<p><strong>Observation：seq100 與 seq150 差異極小，seq50 稍差；考慮效率，我會選擇固定 seq100。</strong></p>
+<h3 id="25-rnn-vs-lstm-總結">2.5 RNN vs LSTM 總結 </h3>
+<ul>
+<li>LSTM 數值全面勝出，尤其 hs256：驗證 loss=1.3905、BPC≈2.006、acc≈0.587（5 epoch）。</li>
+<li>Breakpoints 顯示 LSTM 句子流暢、劇本風格明顯；RNN 假詞與斷句較多。</li>
+<li>收斂速度：LSTM 3–5 epoch 即趨平；RNN 拉長 epoch 也難有突破。</li>
+</ul>
+<hr>
+<h2 id="3-文字生成-prime-以最佳模型-lstm_hs_256">3. 文字生成 (Prime, 以最佳模型 LSTM_HS_256) </h2>
+<p>模型：LSTM_HS_256 (seq_len=100)，checkpoint <code>checkpoints/best_model_LSTM.pth</code>。<br>
+檔案：<code>outputs/generation_final.txt</code>，Prime="JULIET"，溫度=0.6，長度 500（格式化為 12 行）。完整輸出：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>JULIET:
+What, sir?
+
+MARK ANTONY:
+A heart, I
+ say, you will not a man forth to Cieson
+to
+ prove my beauty, and his majesty of a worl
+d.
+
+TITUS ANDRONICUS:
+Come, go with me.
+
+CA
+SSIO:
+Here, my lord, and the bride-balls an
+d moonlight
+Of despite of Edward will be de
+fend
+The tribune to the Fulster's father to
+ the
+fault of way.
+
+LEONATO:
+I cannot be no
+t before the former than they know
+The stoc
+ks of heaven, and think he be made you and
+
+the glory be the end: and the sea was provo
+ked before
+The danger of a party 
+</code></pre><p><strong>Observation：全篇保持劇本格式，角色名頻繁且對話段落清楚；雖仍有少數斷行與不通順詞，但溫度 0.6 下整體穩定度佳、語氣一致性不錯，較高溫時的雜訊少。</strong></p>
+<hr>
+<h2 id="4-結論">4. 結論 </h2>
+<ul>
+<li><strong>最佳模型</strong>：LSTM_HS_256（seq_len=100），驗證 loss=1.3905、BPC≈2.006、acc≈0.587（5 epoch）。成本效益最佳。</li>
+<li><strong>是否要再訓練更久？</strong> 這組在第 1 個 epoch 就接近最優，後續收益有限；其他組合差距大，即使拉長也難追上，我維持現狀。</li>
+<li><strong>生成溫度</strong>：本次 prime 用 0.6，穩定度高；若要更多樣性可微調，但目前設定已符合需求。</li>
+</ul>
+<hr>
+<p><em>所有圖片在 <code>plots/</code>，完整指標與生成輸出在 <code>outputs/</code>，checkpoint 於 <code>checkpoints/</code>。如需額外細節可直接檢視檔案。</em></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
